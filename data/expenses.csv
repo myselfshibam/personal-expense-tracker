@@ -1,0 +1,172 @@
+id,date,category,amount,description
+1,2026-04-12,Other,359.98,Mobile recharge
+2,2026-04-14,Food,418.93,Weekly vegetables
+3,2026-04-14,Food,166.06,Tea and snacks
+4,2026-04-16,Food,335.01,Weekly vegetables
+5,2026-04-18,Education,2039.33,Reference book
+6,2026-04-19,Travel,227.08,Auto fare
+7,2026-04-19,Food,619.81,Dinner with friends
+8,2026-04-20,Food,187.58,Dinner with friends
+9,2026-04-21,Entertainment,413.33,Weekend outing
+10,2026-04-21,Travel,413.60,Metro card recharge
+11,2026-04-22,Shopping,1642.31,Phone cover
+12,2026-04-22,Food,478.95,Tea and snacks
+13,2026-04-23,Travel,1375.87,Bus pass
+14,2026-04-24,Food,222.32,Lunch at canteen
+15,2026-04-26,Food,370.79,Dinner with friends
+16,2026-04-26,Shopping,1124.95,T-shirt
+17,2026-04-28,Travel,1044.59,Auto fare
+18,2026-04-28,Other,374.35,Mobile recharge
+19,2026-04-29,Travel,1259.09,Bus pass
+20,2026-04-29,Food,299.62,Tea and snacks
+21,2026-04-30,Shopping,676.12,T-shirt
+22,2026-04-30,Other,403.37,Mobile recharge
+23,2026-05-02,Education,4183.38,Printing notes
+24,2026-05-03,Shopping,2554.03,Shoes
+25,2026-05-05,Food,435.43,Tea and snacks
+26,2026-05-07,Shopping,834.41,Headphones
+27,2026-05-08,Travel,1250.35,Metro card recharge
+28,2026-05-09,Travel,771.08,Auto fare
+29,2026-05-10,Entertainment,484.80,Gaming credit
+30,2026-05-11,Shopping,1284.58,Headphones
+31,2026-05-12,Food,207.26,Lunch at canteen
+32,2026-05-14,Entertainment,414.64,Concert pass
+33,2026-05-16,Travel,582.61,Train ticket
+34,2026-05-17,Other,542.29,Laundry
+35,2026-05-18,Education,2556.21,Printing notes
+36,2026-05-18,Entertainment,939.40,Weekend outing
+37,2026-05-19,Travel,606.84,Cab to station
+38,2026-05-20,Food,151.59,Lunch at canteen
+39,2026-05-21,Food,294.96,Groceries
+40,2026-05-24,Food,176.97,Dinner with friends
+41,2026-05-24,Education,683.38,Online course
+42,2026-05-25,Food,449.67,Dinner with friends
+43,2026-05-25,Education,1736.79,Reference book
+44,2026-05-26,Other,398.79,Gift
+45,2026-05-27,Food,177.46,Dinner with friends
+46,2026-05-28,Travel,949.37,Train ticket
+47,2026-05-30,Other,434.92,Medicine
+48,2026-05-31,Entertainment,912.25,Concert pass
+49,2026-05-31,Other,695.84,Haircut
+50,2026-06-01,Food,215.74,Lunch at canteen
+51,2026-06-01,Travel,1079.48,Bus pass
+52,2026-06-02,Education,2747.16,Online course
+53,2026-06-03,Entertainment,890.46,Streaming subscription
+54,2026-06-04,Travel,569.46,Metro card recharge
+55,2026-06-06,Travel,419.45,Train ticket
+56,2026-06-07,Travel,1415.32,Bus pass
+57,2026-06-08,Food,177.44,Tea and snacks
+58,2026-06-09,Food,364.30,Weekly vegetables
+59,2026-06-11,Entertainment,532.04,Movie ticket
+60,2026-06-13,Shopping,2093.10,Backpack
+61,2026-06-14,Travel,874.99,Metro card recharge
+62,2026-06-15,Travel,1023.44,Metro card recharge
+63,2026-06-16,Food,193.26,Lunch at canteen
+64,2026-06-17,Entertainment,974.29,Streaming subscription
+65,2026-06-17,Education,2077.61,Printing notes
+66,2026-06-18,Food,399.43,Groceries
+67,2026-06-21,Shopping,856.39,Headphones
+68,2026-06-21,Entertainment,436.98,Concert pass
+69,2026-06-22,Food,250.89,Weekly vegetables
+70,2026-06-23,Food,332.31,Lunch at canteen
+71,2026-06-25,Entertainment,805.68,Weekend outing
+72,2026-06-26,Entertainment,1082.85,Streaming subscription
+73,2026-06-27,Food,378.94,Tea and snacks
+74,2026-06-27,Shopping,1739.04,Headphones
+75,2026-06-28,Food,440.34,Groceries
+76,2026-06-29,Food,480.23,Weekly vegetables
+77,2026-06-29,Travel,1088.04,Metro card recharge
+78,2026-06-30,Food,228.08,Groceries
+79,2026-06-30,Shopping,1525.20,Phone cover
+80,2026-07-03,Food,778.44,Weekly vegetables
+81,2026-07-04,Food,266.80,Weekly vegetables
+82,2026-07-04,Travel,692.55,Auto fare
+83,2026-07-05,Entertainment,1212.63,Concert pass
+84,2026-07-05,Other,730.57,Medicine
+85,2026-07-06,Food,189.96,Tea and snacks
+86,2026-07-07,Food,250.94,Groceries
+87,2026-07-08,Education,2728.77,Online course
+88,2026-07-09,Food,645.06,Tea and snacks
+89,2026-07-10,Shopping,748.55,Backpack
+90,2026-07-11,Other,663.23,Medicine
+91,2026-07-12,Other,364.75,Gift
+92,2026-07-13,Food,170.56,Dinner with friends
+93,2026-07-15,Travel,653.38,Metro card recharge
+94,2026-07-16,Food,443.26,Weekly vegetables
+95,2026-07-19,Other,203.76,Haircut
+96,2026-07-20,Food,549.87,Dinner with friends
+97,2026-07-21,Entertainment,1036.50,Concert pass
+98,2026-07-22,Food,688.26,Weekly vegetables
+99,2026-07-23,Shopping,736.04,T-shirt
+100,2026-07-24,Travel,268.15,Metro card recharge
+101,2026-07-26,Food,617.60,Groceries
+102,2026-07-27,Entertainment,616.72,Concert pass
+103,2026-07-28,Travel,1354.22,Train ticket
+104,2026-07-28,Food,387.73,Lunch at canteen
+105,2026-07-30,Food,223.01,Dinner with friends
+106,2026-07-31,Travel,431.55,Cab to station
+107,2026-08-01,Education,1245.46,Reference book
+108,2026-08-01,Other,141.31,Mobile recharge
+109,2026-08-02,Travel,415.21,Cab to station
+110,2026-08-02,Food,346.18,Tea and snacks
+111,2026-08-03,Travel,1288.67,Train ticket
+112,2026-08-04,Shopping,3127.03,Shoes
+113,2026-08-05,Entertainment,852.79,Streaming subscription
+114,2026-08-06,Other,889.26,Medicine
+115,2026-08-09,Travel,238.31,Cab to station
+116,2026-08-10,Education,1271.02,Online course
+117,2026-08-10,Shopping,595.62,Headphones
+118,2026-08-11,Food,65.88,Dinner with friends
+119,2026-08-12,Other,446.31,Medicine
+120,2026-08-14,Food,223.93,Dinner with friends
+121,2026-08-15,Food,267.56,Lunch at canteen
+122,2026-08-16,Travel,92.27,Bus pass
+123,2026-08-18,Travel,210.65,Metro card recharge
+124,2026-08-19,Food,247.48,Weekly vegetables
+125,2026-08-20,Entertainment,391.87,Weekend outing
+126,2026-08-20,Travel,541.68,Cab to station
+127,2026-08-21,Food,440.11,Lunch at canteen
+128,2026-08-23,Education,2534.18,Stationery
+129,2026-08-23,Food,386.02,Weekly vegetables
+130,2026-08-24,Entertainment,971.82,Weekend outing
+131,2026-08-24,Shopping,1987.40,Headphones
+132,2026-08-28,Education,3733.30,Printing notes
+133,2026-08-29,Travel,864.79,Train ticket
+134,2026-08-30,Travel,80.95,Metro card recharge
+135,2026-08-31,Entertainment,329.22,Weekend outing
+136,2026-08-31,Food,517.90,Dinner with friends
+137,2026-09-02,Food,532.44,Lunch at canteen
+138,2026-09-03,Travel,595.52,Cab to station
+139,2026-09-04,Shopping,1758.08,Headphones
+140,2026-09-06,Food,256.70,Dinner with friends
+141,2026-09-06,Education,903.65,Printing notes
+142,2026-09-08,Food,473.45,Lunch at canteen
+143,2026-09-09,Food,382.14,Tea and snacks
+144,2026-09-10,Travel,334.65,Train ticket
+145,2026-09-11,Food,165.99,Tea and snacks
+146,2026-09-13,Travel,1149.48,Cab to station
+147,2026-09-14,Travel,1357.20,Auto fare
+148,2026-09-16,Food,525.74,Dinner with friends
+149,2026-09-16,Other,222.97,Laundry
+150,2026-09-17,Entertainment,849.06,Streaming subscription
+151,2026-09-18,Entertainment,643.29,Movie ticket
+152,2026-09-19,Food,369.00,Tea and snacks
+153,2026-09-20,Food,201.30,Dinner with friends
+154,2026-09-21,Food,602.30,Groceries
+155,2026-09-22,Shopping,2371.04,T-shirt
+156,2026-09-23,Shopping,2616.95,Shoes
+157,2026-09-24,Food,319.69,Weekly vegetables
+158,2026-09-26,Other,593.32,Mobile recharge
+159,2026-09-27,Food,597.17,Dinner with friends
+160,2026-09-28,Food,261.80,Weekly vegetables
+161,2026-09-29,Food,310.42,Tea and snacks
+162,2026-10-01,Entertainment,1208.97,Weekend outing
+163,2026-10-02,Shopping,611.45,Backpack
+164,2026-10-03,Education,918.96,Exam fee
+165,2026-10-04,Food,698.46,Lunch at canteen
+166,2026-10-05,Travel,558.16,Bus pass
+167,2026-10-06,Shopping,3066.67,Shoes
+168,2026-10-07,Education,1313.80,Stationery
+169,2026-10-08,Food,455.12,Groceries
+170,2026-10-09,Travel,1135.06,Train ticket
+171,2026-10-09,Shopping,2999.00,Shirt & pant

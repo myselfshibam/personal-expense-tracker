@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block title %}Expenses{% endblock %}
+{% block content %}
+<div class="page-head"><h1>Expenses</h1></div>
+
+<form method="get" class="panel filters">
+  <div class="field"><label for="q">Search</label><input type="text" id="q" name="q" value="{{ keyword }}" placeholder="Description contains..."></div>
+  <div class="field">
+    <label for="category">Category</label>
+    <select id="category" name="category">
+      <option value="">All</option>
+      {% for name in categories %}<option value="{{ name }}" {{ 'selected' if category == name }}>{{ name }}</option>{% endfor %}
+    </select>
+  </div>
+  <div class="field">
+    <label for="sort">Sort by</label>
+    <select id="sort" name="sort">
+      {% for key in ['date', 'amount', 'category', 'description'] %}
+        <option value="{{ key }}" {{ 'selected' if sort_by == key }}>{{ key|capitalize }}</option>
+      {% endfor %}
+    </select>
+  </div>
+  <div class="field">
+    <label for="order">Order</label>
+    <select id="order" name="order">
+      <option value="desc" {{ 'selected' if order == 'desc' }}>Descending</option>
+      <option value="asc" {{ 'selected' if order == 'asc' }}>Ascending</option>
+    </select>
+  </div>
+  <button type="submit" class="btn">Apply</button>
+</form>
+
+<section class="panel">
+  {% if rows %}
+    <table>
+      <thead><tr><th>ID</th><th>Date</th><th>Category</th><th>Description</th><th class="num">Amount</th><th></th></tr></thead>
+      <tbody>
+        {% for r in rows %}
+          <tr>
+            <td class="muted">{{ r.id }}</td>
+            <td>{{ r.date.strftime('%Y-%m-%d') }}</td>
+            <td><span class="category-badge cat-{{ r.category|lower }}">{{ r.category }}</span></td>
+            <td>{{ r.description }}</td>
+            <td class="num">{{ r.amount|money }}</td>
+            <td class="num">
+              <form method="post" action="{{ url_for('delete', expense_id=r.id) }}" onsubmit="return confirm('Delete this expense?');">
+                <button type="submit" class="link-btn">Delete</button>
+              </form>
+            </td>
+          </tr>
+        {% endfor %}
+      </tbody>
+      <tfoot><tr><td colspan="4">{{ rows|length }} record(s)</td><td class="num">{{ total|money }}</td><td></td></tr></tfoot>
+    </table>
+  {% else %}
+    <p class="empty">No expenses match.</p>
+  {% endif %}
+</section>
+{% endblock %}

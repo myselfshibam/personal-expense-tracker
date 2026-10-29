@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% block title %}Charts{% endblock %}
+{% block content %}
+<div class="page-head"><h1>Charts</h1><p class="muted">Generated from your current data each time the page loads.</p></div>
+
+{% if empty %}
+  <div class="panel empty">No expenses recorded yet. <a href="{{ url_for('add') }}">Add an expense</a>.</div>
+{% else %}
+  <section class="grid two">
+    <figure class="panel chart"><img src="{{ url_for('chart_image', name='category_bar') }}" alt="Bar chart of spending by category"><figcaption>Bar chart</figcaption></figure>
+    <figure class="panel chart"><img src="{{ url_for('chart_image', name='category_pie') }}" alt="Pie chart of category share"><figcaption>Pie chart</figcaption></figure>
+    <figure class="panel chart"><img src="{{ url_for('chart_image', name='spending_trend') }}" alt="Line plot of spending trend"><figcaption>Line plot</figcaption></figure>
+    <figure class="panel chart"><img src="{{ url_for('chart_image', name='amount_histogram') }}" alt="Histogram of expense amounts"><figcaption>Histogram</figcaption></figure>
+  </section>
+{% endif %}
+{% endblock %}

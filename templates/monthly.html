@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block title %}Monthly Report{% endblock %}
+{% block content %}
+<div class="page-head"><h1>Monthly Report</h1></div>
+
+{% if empty %}
+  <div class="panel empty">No expenses recorded yet. <a href="{{ url_for('add') }}">Add an expense</a>.</div>
+{% else %}
+  <form method="get" class="panel filters">
+    <div class="field">
+      <label for="month">Month</label>
+      <select id="month" name="month">
+        {% for m in available|reverse %}<option value="{{ m }}" {{ 'selected' if m == chosen }}>{{ m }}</option>{% endfor %}
+      </select>
+    </div>
+    <button type="submit" class="btn">Show</button>
+  </form>
+
+  {% if not has_data %}
+    <div class="panel empty">No expenses recorded for {{ chosen }}.</div>
+  {% else %}
+    <section class="kpis">
+      <div class="kpi"><span>Total for {{ chosen }}</span><strong>{{ total|money }}</strong></div>
+      <div class="kpi"><span>Records</span><strong>{{ count }}</strong></div>
+      <div class="kpi"><span>Average per expense</span><strong>{{ stats.per_expense|money }}</strong></div>
+      <div class="kpi"><span>Highest / lowest</span><strong class="small-strong">{{ high.amount|money }} / {{ low.amount|money }}</strong></div>
+    </section>
+
+    <section class="panel">
+      <h2>By category</h2>
+      {% for name, value, share in categories %}
+        <div class="bar-row">
+          <div class="bar-label"><span>{{ name }}</span><span>{{ value|money }} &middot; {{ '%.1f'|format(share) }}%</span></div>
+          <div class="bar"><div style="width: {{ share }}%"></div></div>
+        </div>
+      {% endfor %}
+    </section>
+
+    <section class="panel">
+      <h2>Expenses in {{ chosen }}</h2>
+      <table>
+        <thead><tr><th>Date</th><th>Category</th><th>Description</th><th class="num">Amount</th></tr></thead>
+        <tbody>
+          {% for r in rows %}
+            <tr><td>{{ r.date.strftime('%Y-%m-%d') }}</td><td><span class="category-badge cat-{{ r.category|lower }}">{{ r.category }}</span></td><td>{{ r.description }}</td><td class="num">{{ r.amount|money }}</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+    </section>
+  {% endif %}
+{% endif %}
+{% endblock %}

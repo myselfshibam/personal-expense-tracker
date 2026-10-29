@@ -1,0 +1,38 @@
+{% extends "base.html" %}
+{% block title %}Add Expense{% endblock %}
+{% block content %}
+<div class="page-head"><h1>Add Expense</h1><p class="muted">Record a new expense. It is saved to the data file immediately.</p></div>
+
+<form method="post" class="panel form" novalidate>
+  <div class="field">
+    <label for="date">Date</label>
+    <input type="date" id="date" name="date" value="{{ form.date }}" max="{{ form.date if not errors.date else '' }}">
+    {% if errors.date %}<small class="error-text">{{ errors.date }}</small>{% endif %}
+  </div>
+
+  <div class="field">
+    <label for="category">Category</label>
+    <select id="category" name="category">
+      <option value="">Select a category</option>
+      {% for name in categories %}
+        <option value="{{ name }}" {{ 'selected' if form.category == name }}>{{ name }}</option>
+      {% endfor %}
+    </select>
+    {% if errors.category %}<small class="error-text">{{ errors.category }}</small>{% endif %}
+  </div>
+
+  <div class="field">
+    <label for="amount">Amount (Rs.)</label>
+    <input type="text" inputmode="decimal" id="amount" name="amount" value="{{ form.amount }}" placeholder="0.00" autocomplete="off">
+    {% if errors.amount %}<small class="error-text">{{ errors.amount }}</small>{% endif %}
+  </div>
+
+  <div class="field">
+    <label for="description">Description</label>
+    <input type="text" id="description" name="description" value="{{ form.description }}" maxlength="60" placeholder="What was this for?" autocomplete="off">
+    {% if errors.description %}<small class="error-text">{{ errors.description }}</small>{% endif %}
+  </div>
+
+  <button type="submit" class="btn">Save expense</button>
+</form>
+{% endblock %}

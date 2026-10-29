@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+{% block title %}Dashboard{% endblock %}
+{% block content %}
+<div class="page-head">
+  <h1>Dashboard</h1>
+  {% if not empty %}<p class="muted">{{ period[0].strftime('%d %b %Y') }} to {{ period[1].strftime('%d %b %Y') }} &middot; {{ count }} records</p>{% endif %}
+</div>
+
+{% if empty %}
+  <div class="panel empty">No expenses recorded yet. <a href="{{ url_for('add') }}">Add your first expense</a>.</div>
+{% else %}
+  {% if skipped %}<div class="notice error">{{ skipped }} invalid row(s) in the data file were ignored.</div>{% endif %}
+
+  <section class="kpis">
+    <div class="kpi"><span>Total expenditure</span><strong>{{ total|money }}</strong></div>
+    <div class="kpi"><span>Average per month</span><strong>{{ stats.per_month|money }}</strong></div>
+    <div class="kpi"><span>Average per expense</span><strong>{{ stats.per_expense|money }}</strong></div>
+    <div class="kpi"><span>Average per day</span><strong>{{ stats.per_day|money }}</strong></div>
+  </section>
+
+  <section class="grid two">
+    <div class="panel">
+      <h2>Highest expense</h2>
+      <p class="big">{{ high.amount|money }}</p>
+      <p class="muted">{{ high.category }} &middot; {{ high.description }} &middot; {{ high.date.strftime('%d %b %Y') }}</p>
+    </div>
+    <div class="panel">
+      <h2>Lowest expense</h2>
+      <p class="big">{{ low.amount|money }}</p>
+      <p class="muted">{{ low.category }} &middot; {{ low.description }} &middot; {{ low.date.strftime('%d %b %Y') }}</p>
+    </div>
+  </section>
+
+  <section class="grid two">
+    <div class="panel">
+      <h2>By category</h2>
+      {% for name, value, share in categories %}
+        <div class="bar-row">
+          <div class="bar-label"><span>{{ name }}</span><span>{{ value|money }} &middot; {{ '%.1f'|format(share) }}%</span></div>
+          <div class="bar"><div style="width: {{ share }}%"></div></div>
+        </div>
+      {% endfor %}
+    </div>
+    <div class="panel">
+      <h2>By month</h2>
+      <table>
+        <thead><tr><th>Month</th><th class="num">Total</th></tr></thead>
+        <tbody>
+          {% for label, value in months %}
+            <tr><td><a href="{{ url_for('monthly', month=label) }}">{{ label }}</a></td><td class="num">{{ value|money }}</td></tr>
+          {% endfor %}
+        </tbody>
+      </table>
+      {% if change is not none %}
+        <p class="muted small">Latest month is {{ 'up' if change >= 0 else 'down' }} {{ '%.1f'|format(change|abs) }}% on the previous month.</p>
+      {% endif %}
+    </div>
+  </section>
+
+  <section class="panel">
+    <h2>Recent expenses</h2>
+    <table>
+      <thead><tr><th>Date</th><th>Category</th><th>Description</th><th class="num">Amount</th></tr></thead>
+      <tbody>
+        {% for r in recent %}
+          <tr><td>{{ r.date.strftime('%Y-%m-%d') }}</td><td><span class="category-badge cat-{{ r.category|lower }}">{{ r.category }}</span></td><td>{{ r.description }}</td><td class="num">{{ r.amount|money }}</td></tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </section>
+{% endif %}
+{% endblock %}
